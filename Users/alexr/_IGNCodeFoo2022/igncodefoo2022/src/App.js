@@ -2,15 +2,18 @@ import React, { useEffect } from "react";
 
 const App = () => {
     useEffect(() => {
-        const URL = "https://ign-apis.herokuapp.com";
+        const URL = "http://localhost:8010/proxy";
         const fetchData = async () => {
             try {
                 const response = await fetch(URL);
+                console.log(response);
                 const json = await response.json();
+
+
                 console.log(json);
-                } catch (error) {
+            } catch (error) {
                 console.log("error", error);
-                }
+            }
         };
 
 
